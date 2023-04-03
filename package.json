@@ -6,10 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["typescript", "SDK"],
+  "keywords": [
+    "typescript",
+    "SDK"
+  ],
   "author": "Simone Taeggi",
   "license": "ISC",
   "devDependencies": {
     "microbundle": "^0.15.1"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^4.0.2"
   }
 }
