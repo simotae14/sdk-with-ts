@@ -1,6 +1,8 @@
 /*
 Post class define different methods to:
- - 
+ - retrieve a post by its id
+ - retrieve all the posts
+ - create a new post
 */
 import { Base } from '../base';
 import { Post, NewPost } from './types';
