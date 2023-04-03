@@ -6,7 +6,7 @@ The request the method is used to make HTTP requests to the API.
 This method takes in an endpoint and an optional RequestInit the object for additional configuration. 
 The method returns a Promise with the response data of the type T.
 */
-import fetch from 'isomorphic-unfetch';
+//import fetch from 'isomorphic-unfetch';
 
 // define a Type for the Config object
 type Config = {
