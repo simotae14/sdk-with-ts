@@ -1,6 +1,6 @@
 {
   "name": "sdk-with-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple SDK with TS",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
@@ -17,9 +17,6 @@
   "license": "ISC",
   "devDependencies": {
     "microbundle": "^0.15.1"
-  },
-  "dependencies": {
-    "isomorphic-unfetch": "^4.0.2"
   },
   "exports": {
     "require": "./dist/index.js",
