@@ -12,18 +12,18 @@ const resourceName = 'users';
 export class Users extends Base {
   // retrieve user by id
   getUserById(id: number): Promise<User> {
-    return this.request(`${resourceName}/${id}`);
+    return this.request(`/${resourceName}/${id}`);
   }
 
   // retrieve all the users
   getUsers(): Promise<User[]> {
-    return this.request(`${resourceName}`);
+    return this.request(`/${resourceName}`);
   }
 
   // create user
   createPost(newUser: NewUser): Promise<User> {
     return this.request(
-      `${resourceName}`,
+      `/${resourceName}`,
       {
         method: 'POST',
         body: JSON.stringify(newUser),

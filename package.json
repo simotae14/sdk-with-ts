@@ -1,6 +1,6 @@
 {
-  "name": "sdk-with-ts",
-  "version": "1.0.3",
+  "name": "@simotae14/sdk-with-ts",
+  "version": "1.0.0",
   "description": "Simple SDK with TS",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
@@ -16,7 +16,10 @@
   "author": "Simone Taeggi",
   "license": "ISC",
   "devDependencies": {
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.0"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^3.1.0"
   },
   "exports": {
     "require": "./dist/index.js",

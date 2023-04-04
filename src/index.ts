@@ -6,18 +6,15 @@ The apiKey is used for authentication and the baseUrl is used to specify the bas
 the API endpoints. This class creates instances of the Posts and Users classes and makes 
 them available as properties.
 */
+import { Base } from "./base";
 import { Posts } from "./resources/posts";
 import { Users } from "./resources/users";
+import { applyMixins } from './utils';
 
-export class Library {
-  posts: Posts;
-  users: Users;
+class Library extends Base {};
 
-  constructor(config: {
-    apiKey: string;
-    baseUrl?: string;
-  }) {
-    this.posts = new Posts(config);
-    this.users = new Users(config);
-  }
-}
+interface Library extends Posts {};
+
+applyMixins(Library, [Posts, Users]);
+
+export default Library;

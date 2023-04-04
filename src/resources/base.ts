@@ -6,14 +6,14 @@ The request the method is used to make HTTP requests to the API.
 This method takes in an endpoint and an optional RequestInit the object for additional configuration. 
 The method returns a Promise with the response data of the type T.
 */
-
+import fetch from 'isomorphic-unfetch';
 // define a Type for the Config object
 type Config = {
   apiKey: string;
   baseUrl?: string;
 }
 
-export class Base {
+export abstract class Base {
   // define some private attributes
   private apiKey: string;
   private baseUrl: string;
@@ -44,9 +44,10 @@ export class Base {
     return fetch(url, config).then((response) => {
       if (response.ok) {
         return response.json();
+      } else {
+        // if the response is not ok throw an error
+        throw new Error(response.statusText);
       }
-      // if the response is not ok throw an error
-      throw new Error(response.statusText);
     });
   }
 }
